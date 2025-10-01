@@ -16,7 +16,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  snore_detection: ^0.1.0
+  snore_detection: ^0.2.0
 ```
 
 Then run:

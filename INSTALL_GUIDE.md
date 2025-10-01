@@ -29,7 +29,7 @@ dependencies:
 ```yaml
 # pubspec.yaml
 dependencies:
-  snore_detection: ^0.1.0
+  snore_detection: ^0.2.0
 ```
 
 ## Platform Setup

@@ -8,7 +8,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  snore_detection: ^0.1.0
+  snore_detection: ^0.2.0
 ```
 
 Or if using locally:

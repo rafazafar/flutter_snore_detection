@@ -1,3 +1,8 @@
+## 0.2.0
+
+* Update package dependencies to latest compatible releases (path_provider ^2.1.5, permission_handler ^12.0.1, fftea ^1.5.0)
+* Adopt flutter_lints 6.0.0 for updated lint rules
+
 ## 0.1.0
 
 * Initial release of Flutter Snore Detection package
