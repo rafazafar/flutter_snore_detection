@@ -1,3 +1,10 @@
+## 0.3.0
+
+* **NEW:** Add `requestMicrophonePermission()` method to `SnoreDetector` for explicit permission handling
+* **FIX:** Resolve Android microphone access issues by properly requesting runtime permissions
+* **IMPROVED:** Update example app to request permissions before starting detection
+* **IMPROVED:** Add user-friendly permission denial feedback in example app
+
 ## 0.2.0
 
 * Update package dependencies to latest compatible releases (path_provider ^2.1.5, permission_handler ^12.0.1, fftea ^1.5.0)

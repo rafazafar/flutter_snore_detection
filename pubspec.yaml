@@ -1,6 +1,6 @@
 name: snore_detection
 description: Real-time and file-based snoring detection using TensorFlow Lite. Simple API for audio classification with configurable thresholds.
-version: 0.2.0
+version: 0.3.0
 homepage: https://github.com/rafazafar/flutter_snore_detection
 repository: https://github.com/rafazafar/flutter_snore_detection
 issue_tracker: https://github.com/rafazafar/flutter_snore_detection/issues

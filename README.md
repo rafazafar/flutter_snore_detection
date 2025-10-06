@@ -16,7 +16,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  snore_detection: ^0.2.0
+  snore_detection: ^0.3.0
 ```
 
 Then run:
@@ -36,6 +36,13 @@ import 'package:snore_detection/snore_detection.dart';
 // Initialize detector
 final detector = SnoreDetector();
 await detector.initialize();
+
+// Request microphone permission
+final hasPermission = await detector.requestMicrophonePermission();
+if (!hasPermission) {
+  print('Microphone permission denied');
+  return;
+}
 
 // Start live detection
 detector.startLiveDetection(
@@ -121,7 +128,7 @@ Add to your `Info.plist`:
 
 **Issue: Microphone permission denied**
 - Ensure permissions are properly configured in platform-specific files
-- The package automatically requests permission on first use
+- Call `requestMicrophonePermission()` before starting detection (required on Android 6.0+ and iOS)
 
 **Issue: Model fails to load**
 - Make sure `flutter pub get` has been run

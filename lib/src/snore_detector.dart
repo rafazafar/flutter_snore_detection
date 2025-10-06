@@ -97,6 +97,27 @@ class SnoreDetector {
     }
   }
 
+  /// Requests microphone permission from the user.
+  ///
+  /// This should be called before starting live detection to ensure the app
+  /// has the necessary permissions. On Android 6.0+ and iOS, this will show
+  /// the system permission dialog if permission hasn't been granted yet.
+  ///
+  /// Returns `true` if permission is granted, `false` otherwise.
+  ///
+  /// Example:
+  /// ```dart
+  /// final hasPermission = await detector.requestMicrophonePermission();
+  /// if (hasPermission) {
+  ///   await detector.startLiveDetection(...);
+  /// } else {
+  ///   print('Microphone permission denied');
+  /// }
+  /// ```
+  Future<bool> requestMicrophonePermission() async {
+    return await _recorderService.requestPermission();
+  }
+
   /// Starts live audio detection from the device microphone.
   ///
   /// Records audio in 1-second windows and analyzes each window for snoring.

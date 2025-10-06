@@ -70,6 +70,20 @@ class _SnoreDetectionDemoState extends State<SnoreDetectionDemo> {
       return;
     }
 
+    // Request microphone permission before starting
+    final hasPermission = await _detector.requestMicrophonePermission();
+    if (!hasPermission) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Microphone permission is required for detection'),
+            duration: Duration(seconds: 3),
+          ),
+        );
+      }
+      return;
+    }
+
     setState(() {
       _isDetecting = true;
       _statusMessage = 'Listening... (Processing 1-second windows)';
